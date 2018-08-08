@@ -55,7 +55,7 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false, foreign_key: true|
 |E-mail|string|
-|add_index|:usrs, :E-mails, unique: true|
+|add_index|:users, :E-mails, unique: true|
 
 
 ### Association
