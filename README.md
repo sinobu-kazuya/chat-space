@@ -27,8 +27,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 
 ### Association
@@ -46,7 +46,7 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :members
-- has_many :users
+- has_many :users, thorough: :members
 
 
 ## usersテーブル
@@ -59,7 +59,7 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :members
-- has_many :groups
+- has_many :groups, thorough: :members
 
 
 ## messagesテーブル
