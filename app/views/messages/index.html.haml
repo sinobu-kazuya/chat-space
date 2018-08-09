@@ -1,4 +1,3 @@
-%link{:href => "https://use.fontawesome.com/releases/v5.0.6/css/all.css", :rel => "stylesheet"}/
 .notice
   チャットグループが作成されました。
 
@@ -11,7 +10,9 @@
         sampleグループ
       .chatspace__hedder--area-membername
         member kazuya
-      %input#chatspace__hedder--area.-btn{:type => "button", :value => "edit"}/
+      .chatspace__hedder--area-btn
+        = link_to '#' do
+          Edit
 
 
   .chatspace__list
@@ -42,10 +43,12 @@
 
   .chatspace__fotter
     .chatspace__fotter--search
-      %input#chatspace__fotter--search.-input{:name => "message[body]", :placeholder => "type a message", :type => "text"}/
-      %input#chatspace__fotter--search.-bottum{:type => "submit", :value => "Sent"}/
-
-      .chatspace__fotter--search-images
-        = link_to '#' do
+      %form{:action => "/", :method => "post"}
+        %input.chatspace__fotter--search-input{:name => "message[body]", :placeholder => "type a message", :type => "text"}/
+        %input.chatspace__fotter--search-bottum{:type => "submit", :value => "Sent"}/
+        %label
           .far.fa-image
+          %input.chatspace__fotter--search-images{:type => "button"}
+
+
 
