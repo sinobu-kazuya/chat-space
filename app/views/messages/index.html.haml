@@ -1,0 +1,56 @@
+!!! 5
+%html
+  %head
+    %link{:href => "https://use.fontawesome.com/releases/v5.0.6/css/all.css", :rel => "stylesheet"}/
+    %title
+  %body
+  .notice
+    チャットグループが作成されました。
+
+  =render "messages"
+
+  .chatspace
+    .chatspace__hedder
+      .chatspace__hedder--area
+        .chatspace__hedder--area-groupname
+          sampleグループ
+        .chatspace__hedder--area-membername
+          member kazuya
+        .chatspace__hedder--area-btn
+          Edit
+    .chatspace__list
+      .chatspace__list--message
+        .chatspace__list--message-indent
+          .chatspace__list--message-indent-name
+            信夫知也
+          .chatspace__list--message-indent-time
+            100000593/o5/15
+          .chatspace__list--message-indent-body
+            うえええええええええええええええええええええええーーーーーーーーーーい
+      .chatspace__list--message
+        .chatspace__list--message-indent
+          .chatspace__list--message-indent-name
+            信夫知也
+          .chatspace__list--message-indent-time
+            1993/04/28
+          .chatspace__list--message-indent-body
+            うえええええええええええええええええええええええーーーーーーーーーーい
+      .chatspace__list--message
+        .chatspace__list--message-indent
+          .chatspace__list--message-indent-name
+            信夫知也
+          .chatspace__list--message-indent-time
+            2018/05/20
+          .chatspace__list--message-indent-body
+            うえええええええええええええええええええええええーーーーーーーーーーい
+
+    .chatspace__fotter
+      .chatspace__fotter--search
+        .chatspace__fotter--search-input
+          type message
+        .chatspace__fotter--search-bottum
+          Send
+        .chatspace__fotter--search-images
+          = link_to '#' do
+            .far.fa-image
+
