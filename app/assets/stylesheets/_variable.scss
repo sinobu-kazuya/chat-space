@@ -1,0 +1,11 @@
+$maincolor: #38AEF0;
+$subcolor: #434A54;
+$fontcolor: #FFFFFF;
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
