@@ -7,6 +7,8 @@ html, body { height: 100vh; }
     display: block;
   }
 }
+$maincolor: #38AEF0;
+$subcolor: #434A54;
 
 .chatspace{
   width: calc(100vw - 300px);
@@ -32,20 +34,15 @@ html, body { height: 100vh; }
       position: absolute;
       bottom: 0;
     }
-    &-btn{
+    .-btn{
       color: #38AEF0;
       font-size: 15px;
       padding: 12.5px 20px;
       margin: 28px 20px 0;
-      border: 1px solid #38AEF0;
+      border: 1px solid $maincolor;
       float: right;
       margin-bottom: 20px;
       background-color: white;
-      // position: absolute;
-      // top: 28px;
-      // left: 0px;
-      // bottom:28px;
-      // left: calc()
     }
   }
   }
@@ -55,18 +52,17 @@ html, body { height: 100vh; }
       &--message{
         padding-top: 26px;
         padding-left: 40px;
-        // margin-bottom: 20px;
         &-indent{
           padding: 20px 0;
           &-name{
-            color: #434A54;
+            color: $subcolor;
             font-size: 16px;
             font-weight: bold;
             float: left;
             position: relative;
           }
           &-body{
-            color: #434A54;
+            color: $subcolor;
             clear: both;
           }
           &-time{
@@ -74,8 +70,6 @@ html, body { height: 100vh; }
             font-size: 12px;
             padding: 0 10px 10px;
             float: left;
-          // position: absolute;
-          // right: 10px;
         }
         }
       }
@@ -84,14 +78,12 @@ html, body { height: 100vh; }
     height: 90px;
     width: 100%;
     background-color: #B8C3C7;
-    // padding-top: 20px;
     &--search{
       position: relative;
-      &-input{
+      .-input{
         height: 50px;
         background-color: #FFF;
         width: calc( 100% - 200px );
-        //margin: 20px 0;
         border: none;
         position: absolute;
         top:20px;
@@ -99,12 +91,12 @@ html, body { height: 100vh; }
         padding-left: 10px;
         line-height: 50px;
       }
-      &-bottum{
+      .-bottum{
         color: #fff;
         width: 100px;
         height: 50px;
         text-align: center;
-        background-color: #38AEF0;
+        background-color: $maincolor;
         position: absolute;
         top: 20px ;
         right: 20px ;

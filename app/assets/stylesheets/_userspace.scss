@@ -8,6 +8,8 @@ html, body { height: 100%; }
   }
 }
 
+$maincolor: #FFFFFF;
+
 .userspace {
   width:300px;
   height: 100%;
@@ -42,11 +44,11 @@ html, body { height: 100%; }
       }
       .far{
         font-size: 0.8em;
-        color: white;
+        color: $maincolor;
       }
       .fas{
         font-size: 0.8em;
-        color: white;
+        color: $maincolor;
       }
     }
   }
@@ -59,13 +61,13 @@ html, body { height: 100%; }
       height: 80px;
       &-name{
         font-size: 15px;
-        color: #FFFFFF;
+        color: $maincolor;
         margin-top: 20px;
         margin-bottom: 5px;
       }
       &-messages{
         font-size: 11px;
-        color: #FFFFFF;
+        color: $maincolor;
         margin-bottom: 40px;
       }
     }
