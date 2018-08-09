@@ -1,15 +1,5 @@
 html, body { height: 100%; }
 
-@mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: block;
-  }
-}
-
-$maincolor: #FFFFFF;
-
 .userspace {
   width:300px;
   height: 100%;
@@ -44,11 +34,11 @@ $maincolor: #FFFFFF;
       }
       .far{
         font-size: 0.8em;
-        color: $maincolor;
+        color: $fontcolor;
       }
       .fas{
         font-size: 0.8em;
-        color: $maincolor;
+        color: $fontcolor;
       }
     }
   }
@@ -61,13 +51,13 @@ $maincolor: #FFFFFF;
       height: 80px;
       &-name{
         font-size: 15px;
-        color: $maincolor;
+        color: $fontcolor;
         margin-top: 20px;
         margin-bottom: 5px;
       }
       &-messages{
         font-size: 11px;
-        color: $maincolor;
+        color: $fontcolor;
         margin-bottom: 40px;
       }
     }

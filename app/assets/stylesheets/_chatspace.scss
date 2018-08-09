@@ -1,15 +1,5 @@
 html, body { height: 100vh; }
 
-@mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: block;
-  }
-}
-$maincolor: #38AEF0;
-$subcolor: #434A54;
-
 .chatspace{
   width: calc(100vw - 300px);
   height: 100vh;
@@ -34,7 +24,7 @@ $subcolor: #434A54;
       position: absolute;
       bottom: 0;
     }
-    .-btn{
+    &-btn{
       color: #38AEF0;
       font-size: 15px;
       padding: 12.5px 20px;
@@ -80,7 +70,7 @@ $subcolor: #434A54;
     background-color: #B8C3C7;
     &--search{
       position: relative;
-      .-input{
+      &-input{
         height: 50px;
         background-color: #FFF;
         width: calc( 100% - 200px );
@@ -91,7 +81,7 @@ $subcolor: #434A54;
         padding-left: 10px;
         line-height: 50px;
       }
-      .-bottum{
+      &-bottum{
         color: #fff;
         width: 100px;
         height: 50px;
@@ -104,10 +94,10 @@ $subcolor: #434A54;
         box-sizing: border-box;
         line-height: 50px;
       }
-      &-images{
+      .far.fa-image{
         height: 50px;
         width: 50px;
-        margin: 32px 130px 20px 0;
+        margin: 35px 130px 35px 0;
         position: absolute;
         top: 0;
         right: 0;
@@ -115,6 +105,11 @@ $subcolor: #434A54;
           color: black;
         }
       }
+      }
+      label {
+        input {
+          display: none;
+        }
       }
     }
 }
