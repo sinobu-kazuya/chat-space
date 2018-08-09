@@ -1,7 +1,7 @@
 .notice
   チャットグループが作成されました。
 
-=render "messages"
+= render partial: "messages"
 
 .chatspace
   .chatspace__hedder
@@ -13,7 +13,6 @@
       .chatspace__hedder--area-btn
         = link_to '#' do
           Edit
-
 
   .chatspace__list
     .chatspace__list--message
@@ -48,7 +47,4 @@
         %input.chatspace__fotter--search-bottum{:type => "submit", :value => "Sent"}/
         %label
           .far.fa-image
-          %input.chatspace__fotter--search-images{:type => "button"}
-
-
-
+          %input.chatspace__fotter--search-images{:type => "file"}
