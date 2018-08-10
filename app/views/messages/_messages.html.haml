@@ -9,18 +9,10 @@
           = link_to edit_user_path(current_user) do
             .fas.fa-cog
   .userspace__group
-    .userspace__group--list
-      - current_user.groups.each do |group|
+    - current_user.groups.each do |group|
+      .userspace__group--list
         = link_to group_messages_path(group) do
           .userspace__group--list-name
             = group.name
           .userspace__group--list-messages
             メッセージはまだありません。
-          .userspace__group--list-name
-            = group.name
-          .userspace__group--list-messages
-            クルーーーーーーーーー
-          .userspace__group--list-name
-            = group.name
-          .userspace__group--list-messages
-            羽生譲れない
