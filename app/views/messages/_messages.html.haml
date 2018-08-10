@@ -2,7 +2,7 @@
   .userspace__selfname
     .userspace__selfname--content
       .userspace__selfname--content-name
-        kazuya
+        = current_user.name
         .userspace__selfname--content-indent
           = link_to new_group_path do
             .far.fa-edit
@@ -10,15 +10,17 @@
             .fas.fa-cog
   .userspace__group
     .userspace__group--list
-      .userspace__group--list-name
-        こんにちわ
-      .userspace__group--list-messages
-        ありがとう
-      .userspace__group--list-name
-        やほーーーーーーーーーーーい
-      .userspace__group--list-messages
-        クルーーーーーーーーー
-      .userspace__group--list-name
-        ミッキー
-      .userspace__group--list-messages
-        羽生譲れない
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .userspace__group--list-name
+            = group.name
+          .userspace__group--list-messages
+            メッセージはまだありません。
+          .userspace__group--list-name
+            = group.name
+          .userspace__group--list-messages
+            クルーーーーーーーーー
+          .userspace__group--list-name
+            = group.name
+          .userspace__group--list-messages
+            羽生譲れない
