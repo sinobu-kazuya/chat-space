@@ -1,6 +1,9 @@
 $maincolor: #38AEF0;
 $subcolor: #434A54;
 $fontcolor: #FFFFFF;
+$light_blue: #38AEF0;
+$white: #fff;
+$alert_orange: #F35500;
 
 @mixin clearfix {
   &::after {
