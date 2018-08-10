@@ -4,9 +4,9 @@
       .userspace__selfname--content-name
         kazuya
         .userspace__selfname--content-indent
-          = link_to '#' do
+          = link_to new_group_path do
             .far.fa-edit
-          = link_to '#' do
+          = link_to edit_user_path(current_user) do
             .fas.fa-cog
   .userspace__group
     .userspace__group--list
