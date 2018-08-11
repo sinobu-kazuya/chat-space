@@ -1,7 +1,6 @@
 .notice
-  チャットグループが作成されました。
 
-= render partial: "messages"
+= render partial: "sidebar"
 
 .chatspace
   .chatspace__hedder
@@ -12,40 +11,31 @@
         member kazuya
       .chatspace__hedder--area-btn
         = link_to "Edit", '#'
-
   .chatspace__list
-    .chatspace__list--message
-      .chatspace__list--message-indent
-        .chatspace__list--message-indent-name
-          信夫知也
-        .chatspace__list--message-indent-time
-          100000593/o5/15
-        .chatspace__list--message-indent-body
-          うえええええええええええええええええええええええーーーーーーーーーーい
-    .chatspace__list--message
-      .chatspace__list--message-indent
-        .chatspace__list--message-indent-name
-          信夫知也
-        .chatspace__list--message-indent-time
-          1993/04/28
-        .chatspace__list--message-indent-body
-          うえええええええええええええええええええええええーーーーーーーーーーい
-    .chatspace__list--message
-      .chatspace__list--message-indent
-        .chatspace__list--message-indent-name
-          信夫知也
-        .chatspace__list--message-indent-time
-          2018/05/20
-        .chatspace__list--message-indent-body
-          うえええええええええええええええええええええええーーーーーーーーーーい
+    = render @messages
+  / .chatspace__list
+  /   .chatspace__list--message
+  /     .chatspace__list--message-indent
+  /       .chatspace__list--message-indent-name
+  /         = message.user.name
+  /       .chatspace__list--message-indent-time
+  /         = format_posted_time(message.created_at)
+  /       .chatspace__list--message-indent-body
+  /         - if message.content.present?
+  /           = message.content
+  /         = image_tag message.image.url, if message.image.present?
 
   .chatspace__fotter
     .chatspace__fotter--search
-      %form{:action => "/", :method => "post"}
-        %input.chatspace__fotter--search-input{:name => "message[body]", :placeholder => "type a message", :type => "text"}/
-        %input.chatspace__fotter--search-bottum{:type => "submit", :value => "Sent"}/
-        %label
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'chatspace__fotter--search-input', placeholder: 'type a message'
+        / .chatspace__fotter--search-input{:name => "message[body]", :placeholder => "type a message", :type => "text"}/
+        / %label
+        %label.chat_filed-image
+          = f.file_field :image, class: 'chatspace__fotter--search-images', style: 'display: none;'
           .far.fa-image
-          %input.chatspace__fotter--search-images{:type => "file"}
+        / %input.chatspace__fotter--search-images{:type => "file"}
+        = f.submit 'Send', class: 'chatspace__fotter--search-bottum'
+        / %input.chatspace__fotter--search-bottum{:type => "submit", :value => "Sent"}/
 
 
