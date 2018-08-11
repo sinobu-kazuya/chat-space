@@ -3,11 +3,14 @@ $subcolor: #434A54;
 $fontcolor: #FFFFFF;
 $light_blue: #38AEF0;
 $white: #fff;
+$side_blue_dark: #253141;
+$side_blue_light: #2f3e51;
+$light_blue: #38AEF0;
+$light_gray: #999;
+$black: #434a54;
 $alert_orange: #F35500;
-$light_blue: #00FFFF;
-$side_blue_light: #FFFF00;
 $side_group_name: #C0C0C0;
-$side_group_message: #808080;
+$side_group_message: #C1C1C1;
 
 @mixin clearfix {
   &::after {
