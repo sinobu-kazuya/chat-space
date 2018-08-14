@@ -28,7 +28,6 @@ function scroll(messagebox){
     e.preventDefault();
       var formData = new FormData(this);
       var url = $(this).attr('action');
-      console.log('ok')
     $.ajax({
       url: url,
       type: "POST",
@@ -39,7 +38,6 @@ function scroll(messagebox){
     })
     .done(function(data) {
       var html = buildHTML(data)
-      console.log('ok')
       $('.chatspace__list').append(html)
       $('.chatspace__fotter--search-bottum').prop('disabled', false);
       scroll($('.chatspace__list'))
