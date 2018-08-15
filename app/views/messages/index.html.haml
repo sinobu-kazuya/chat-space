@@ -6,11 +6,11 @@
   .chatspace__hedder
     .chatspace__hedder--area
       .chatspace__hedder--area-groupname
-        sampleグループ
+        = @group.name
       .chatspace__hedder--area-membername
-        member kazuya
+        = render "member"
       .chatspace__hedder--area-btn
-        = link_to "Edit", '#'
+        = link_to "Edit", edit_group_path(@group)
   .chatspace__list
     = render @messages
   / .chatspace__list
