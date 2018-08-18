@@ -50,7 +50,6 @@ function scroll(){
   })
 
   var interval = setInterval(function() {
-    console.log('ok');
     if (window.location.pathname.match(/\/groups\/\d+\/messages/)) {
         var messageId = $('.chatspace__list--message:last').data('id');
       $.ajax({
