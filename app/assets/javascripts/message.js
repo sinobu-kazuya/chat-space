@@ -21,9 +21,9 @@ function buildHTML(message){
   return html;
 }
 
-function scroll(){
-   $('.chatspace__list').animate({scrollTop: $('.chatspace__list')[0].scrollHeight},'fast');
- }
+  function scroll(){
+    $('.chatspace__list').animate({scrollTop: $('.chatspace__list')[0].scrollHeight},'fast');
+  }
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
