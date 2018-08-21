@@ -1,1 +1,41 @@
-= render partial: "messages/sidebar"
+.notice
+
+= render partial: "sidebar"
+
+.chatspace
+  .chatspace__hedder
+    .chatspace__hedder--area
+      .chatspace__hedder--area-groupname
+        = @group.name
+      .chatspace__hedder--area-membername
+        = render "member"
+      .chatspace__hedder--area-btn
+        = link_to "Edit", edit_group_path(@group)
+  .chatspace__list
+    = render @messages
+  / .chatspace__list
+  /   .chatspace__list--message
+  /     .chatspace__list--message-indent
+  /       .chatspace__list--message-indent-name
+  /         = message.user.name
+  /       .chatspace__list--message-indent-time
+  /         = format_posted_time(message.created_at)
+  /       .chatspace__list--message-indent-body
+  /         - if message.content.present?
+  /           = message.content
+  /         = image_tag message.image.url, if message.image.present?
+
+  .chatspace__fotter
+    .chatspace__fotter--search
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'chatspace__fotter--search-input', placeholder: 'type a message'
+        / .chatspace__fotter--search-input{:name => "message[body]", :placeholder => "type a message", :type => "text"}/
+        / %label
+        %label.chat_filed-image
+          = f.file_field :image, class: 'chatspace__fotter--search-images', style: 'display: none;'
+          .far.fa-image
+        / %input.chatspace__fotter--search-images{:type => "file"}
+        = f.submit 'Send', class: 'chatspace__fotter--search-bottum'
+        / %input.chatspace__fotter--search-bottum{:type => "submit", :value => "Sent"}/
+
+
