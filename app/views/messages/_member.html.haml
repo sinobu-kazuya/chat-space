@@ -1,4 +1,3 @@
 %li.member
   Member:
-  = current_user.name
   = @group.users.pluck(:name).join(", ")
