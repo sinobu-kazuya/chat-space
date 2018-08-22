@@ -1,5 +1,5 @@
 
-$(document).on('turbolinks:load',function() {
+$(function() {
 function buildHTML(message){
   var img = message.image ? `<img src= ${message.image}>` : "";
   var html = `<div class="chatspace__list--message" data-id=${ message.id }>
